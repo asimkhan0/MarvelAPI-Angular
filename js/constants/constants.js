@@ -3,8 +3,8 @@ angular.module('app')
         function () {
             return {
                 URLS: {
-                    getHeroesByCharacters:"http://gateway.marvel.com/v1/public/characters",
-                    getHeroById:"http://gateway.marvel.com/v1/public/characters/",
+                    getHeroesByCharacters:"https://gateway.marvel.com/v1/public/characters",
+                    getHeroById:"https://gateway.marvel.com/v1/public/characters/",
                 },
                 offset: 10,
                 marvelPublicKey: 'e1df74b51f22c151f2980d4a0a7db060',

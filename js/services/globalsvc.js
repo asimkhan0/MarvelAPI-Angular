@@ -27,7 +27,7 @@ angular.module('app')
                 GetHeroesList: function(startingCharacters){
                     let timeStamp = new Date().getTime();
                     const hash = CryptoJS.MD5(timeStamp + CONST.hash + CONST.marvelPublicKey);
-                    var url = "http://gateway.marvel.com/v1/public/characters?limit=5&apikey="+
+                    var url = "https://gateway.marvel.com/v1/public/characters?limit=5&apikey="+
                     CONST.marvelPublicKey+"&ts="+timeStamp+"&hash="+hash;
                     return $http.get(url, {
                         params: {
