@@ -1,0 +1,8 @@
+{
+  "name": "marvelcharacters",
+  "version": "",
+  "description": "\"# MarvelAPI-Angular\"",
+  "scripts": {
+    "start": "http-server"
+  }
+}
