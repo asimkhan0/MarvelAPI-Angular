@@ -9,14 +9,16 @@ app.directive('autoComplete', ['globalsvc','$state', function (globalsvc, $state
                         response($.map(scope.results, function (autocompleteResult) {
                             return {
                                 label: autocompleteResult.name,
-                                value: autocompleteResult.id
+                                value: autocompleteResult.name,
+                                id: autocompleteResult.id
                             }
                         }))
                     });
                 },
                 minLength: 3,
                 select: function (event, selectedItem) {
-                    const item = scope.results.find(result => result.id === selectedItem.item.value);
+                    debugger
+                    const item = scope.results.find(result => result.id === selectedItem.item.id);
                     $state.go('character', {obj: item});
                     //scope.optionSelected(selectedItem.item.value);
                     //scope.$apply();
