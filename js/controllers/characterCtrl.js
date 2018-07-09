@@ -1,4 +1,3 @@
-let app = angular.module('app');
 
 app.controller('characterCtrl', ['$scope', '$stateParams',
     function ($scope, $stateParams) {
