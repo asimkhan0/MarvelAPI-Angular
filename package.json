@@ -3,9 +3,10 @@
   "version": "",
   "description": "\"# MarvelAPI-Angular\"",
   "scripts": {
-    "start": "http-server"
+    "start": "node index.js"
   },
-  "devDependencies": {
-    "http-server": "^0.11.1"
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
