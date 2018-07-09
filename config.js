@@ -10,4 +10,12 @@ $stateProvider
         templateUrl: "views/app.html",
         controller: 'appCtrl'
     })
+    .state('character', {
+        url: "/character",
+        templateUrl: "views/character.html",
+        controller: 'characterCtrl',
+        params: {
+            obj:{}
+        }
+    })
 });
