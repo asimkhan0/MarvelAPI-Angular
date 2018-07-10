@@ -15,7 +15,7 @@ app.directive('autoComplete', ['globalsvc','$state', function (globalsvc, $state
                         }))
                     });
                 },
-                minLength: 0,
+                minLength: 1,
                 select: (event, selectedItem) => {
                     const item = scope.results.find(result => result.id === selectedItem.item.id);
                     $state.go('character', {obj: item});
