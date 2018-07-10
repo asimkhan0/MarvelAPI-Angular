@@ -1,8 +1,6 @@
-
 app.controller('characterCtrl', ['$scope', '$stateParams','$state',
     function ($scope, $stateParams,$state) {
-    debugger;
-    $state.current
+
         if(!$stateParams.obj.id && $state.current.name === 'character'){
             $state.go('app');
         }
