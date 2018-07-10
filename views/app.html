@@ -3,4 +3,7 @@
         <input class="searchBox" placeholder="Search here.." ng-model="YourObject" auto-complete />
     </div>
     <img src="../assets/giphy.gif" height="100" width="100" alt="Loading..." ng-show="loading">
+    <div class="charactersFullList" ng-if="true">
+        <characters-full-list charactersList='{{charactersList}}'></characters-full-list>
+    </div>
 </div>
