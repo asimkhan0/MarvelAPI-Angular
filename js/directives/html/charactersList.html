@@ -1,1 +1,8 @@
-<h1>charcters list </h1>
+<h1>Charcters List </h1>
+
+<div ng-repeat="hero in charactersList">
+    <a href="#" ng-click="openCharacter(hero.id)" class="characterName">{{hero.name}}</a>
+    <a class="characterLink">{{hero.resourceURI}}</a>
+    <p class="characterDescription">{{hero.characterDescription}}</p>
+
+</div>

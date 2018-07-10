@@ -1,12 +1,15 @@
 app.directive('autoComplete', ['globalsvc','$state', function (globalsvc, $state) {
     return {
-        restrict: "A",
+        restrict: "E",
+        templateUrl: 'js/directives/html/autocomplete.html',
         link: function (scope, elem, attr, ctrl) {
-            $(elem).autocomplete({
+            $('#searchBox').autocomplete({
                 source: (searchTerm, response) => {
                     globalsvc.GetHeroesList(searchTerm.term).then(function (autocompleteResults) {
                         scope.results = autocompleteResults.data.data.results;
-                        response($.map(scope.results, function (autocompleteResult) {
+                        console.log(scope.results);
+                        scope.charactersList = autocompleteResults.data.data.results;
+                        response($.map(scope.results.slice(0, 5), function (autocompleteResult) {
                             return {
                                 label: autocompleteResult.name,
                                 value: autocompleteResult.name,
