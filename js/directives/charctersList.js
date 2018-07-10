@@ -6,7 +6,7 @@ app.directive('charactersFullList', ['globalsvc','$state', function (globalsvc, 
             charactersList: '<'
         },
         link: function (scope, elem, attr, ctrl) {
-
+            
         }
     };
 }]);
