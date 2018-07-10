@@ -1,7 +1,13 @@
 
-app.controller('characterCtrl', ['$scope', '$stateParams',
-    function ($scope, $stateParams) {
-        
+app.controller('characterCtrl', ['$scope', '$stateParams','$state',
+    function ($scope, $stateParams,$state) {
+    debugger;
+    $state.current
+        if(!$stateParams.obj.id && $state.current.name === 'character'){
+            $state.go('app');
+        }
         $scope.characterDetails = $stateParams.obj;
-        $scope.characterDetails.picUrl = $scope.characterDetails.thumbnail.path + '.' + $scope.characterDetails.thumbnail.extension;
+        if($scope.characterDetails.thumbnail) {
+          $scope.characterDetails.picUrl = $scope.characterDetails.thumbnail.path + '.' + $scope.characterDetails.thumbnail.extension;
+        }
     }]);

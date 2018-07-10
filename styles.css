@@ -20,5 +20,21 @@
 .characterDetailsContainer {
     margin-left: 1%;
     margin-right: 1%;
+}
+
+.charactersFullList{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.characterName{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.characterLink {
+    color: green;
+}
+.characterDescription{
 
 }
